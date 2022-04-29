@@ -12,21 +12,21 @@ taken from https://github.com/techwithtim/Pygame-Car-Racer/tree/main/tutorial1-c
 You will have to setup the directory for the images (pygame.image.load())
 """
 
-GRASS = pygame.image.load("vscodeproj/img/grass.jpg")
+GRASS = pygame.image.load("imgs\\grass.jpg")
 GRASS = pygame.transform.scale(GRASS, (900,900))
-TRACK = pygame.image.load("vscodeproj/img/track.png")
+TRACK = pygame.image.load("imgs\\track.png")
 
-TRACK_BORDER = pygame.image.load("vscodeproj/img/track-border.png")
-FINISH = pygame.image.load("vscodeproj/img/finish.png")
-EXPLOSION = pygame.image.load("vscodeproj/img/explosion.png")
+TRACK_BORDER = pygame.image.load("imgs\\track-border.png")
+FINISH = pygame.image.load("imgs\\finish.png")
+EXPLOSION = pygame.image.load("imgs\\explosion.png")
 EXPLOSION = pygame.transform.scale(EXPLOSION, (40, 40))
 
 #Background Music
-mixer.music.load("vscodeproj\Sounds\Background-Song.wav")
+mixer.music.load("Sounds\\Background-Song.wav")
 mixer.music.play(-1) #-1 loops the sound
 
 # player car taken from https://github.com/techwithtim/Pygame-Car-Racer/tree/main/tutorial1-code
-RED_CAR = pygame.image.load("vscodeproj/img/red-car.png")
+RED_CAR = pygame.image.load("imgs\\red-car.png")
 RED_CAR = pygame.transform.scale(RED_CAR, (20,40))
 CAR_dir = pygame.transform.rotate(RED_CAR,0)
 
@@ -54,7 +54,6 @@ wall_rect_13 = pygame.Rect(30, 849, 830, 51)
 
 WIDTH, HEIGHT = TRACK.get_width(), TRACK.get_height()
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
-# grass = pygame.display.set_mode((gWIDTH,gHEIGHT))
 pygame.display.set_caption("Drift Game!")
 
 FPS = 60
@@ -80,10 +79,7 @@ while run:
          print("--PROGRAM TERMINATED--")
          exit()
     
-        # if event.type == pygame.MOUSEMOTION: #for finding positions its good
-        #     print(event.pos) 
-
-    # CAR_image = pygame.transform.rotate(RED_CAR, angle)
+      
     userInput = pygame.key.get_pressed()
 
     #create mixer channels in order to overlap sounds
@@ -96,7 +92,7 @@ while run:
         if userInput [pygame.K_LSHIFT]: # boost
             RED_CAR_rect.y -= RED_CAR_vel +3 # depending on input, RED_CAR_vel will subtract or add from x or y
         #Makes sound of car accelerating
-        Acceleration_Sound = mixer.Sound("vscodeproj\Sounds\Acceleration.wav")
+        Acceleration_Sound = mixer.Sound("Sounds\\Acceleration.wav")
         pygame.mixer.Sound.play(Acceleration_Sound)
  
     if userInput [pygame.K_s]:
@@ -104,7 +100,8 @@ while run:
         CAR_dir = pygame.transform.rotate(RED_CAR,180)
         if userInput [pygame.K_LSHIFT]:
             RED_CAR_rect.y += RED_CAR_vel +3
-
+        
+        Acceleration_Sound = mixer.Sound("Sounds\\Acceleration.wav")
         pygame.mixer.Sound.play(Acceleration_Sound)
             
 
@@ -118,6 +115,7 @@ while run:
         if userInput [pygame.K_LSHIFT]:
             RED_CAR_rect.x += RED_CAR_vel +3
 
+        Acceleration_Sound = mixer.Sound("Sounds\\Acceleration.wav")
         pygame.mixer.Sound.play(Acceleration_Sound)
 
     if userInput [pygame.K_a]:
@@ -130,6 +128,7 @@ while run:
         if userInput [pygame.K_LSHIFT]:
             RED_CAR_rect.x -= RED_CAR_vel +3
         
+        Acceleration_Sound = mixer.Sound("Sounds\\Acceleration.wav")
         pygame.mixer.Sound.play(Acceleration_Sound)
 
 
@@ -144,7 +143,7 @@ while run:
         RED_CAR_rect.y = RED_CAR_y
 
 
-        Explosion_Sound = mixer.Sound("vscodeproj\Sounds\Crash.wav")
+        Explosion_Sound = mixer.Sound("Sounds\\Crash.wav")
         channel1.play(Explosion_Sound) #Calls a channel to overlap acceleration sound
     
 
