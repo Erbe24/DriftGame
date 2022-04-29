@@ -12,18 +12,18 @@ taken from https://github.com/techwithtim/Pygame-Car-Racer/tree/main/tutorial1-c
 
 You will have to setup the directory for the images (pygame.image.load())
 """
-GRASS = pygame.image.load("vscodeproj/img/grass.jpg")# NOTE: setup the directory for imgs
+GRASS = pygame.image.load("vscodeproj/img/grass.jpg")# setup the directory for imgs
 GRASS = pygame.transform.scale(GRASS, (900,900))
-TRACK = pygame.image.load("vscodeproj/img/track.png")# NOTE: setup the directory for imgs
+TRACK = pygame.image.load("vscodeproj/img/track.png")#  setup the directory for imgs
 
-TRACK_BORDER = pygame.image.load("vscodeproj/img/track-border.png")# NOTE: setup the directory for imgs
-FINISH = pygame.image.load("vscodeproj/img/finish.png")# NOTE: setup the directory for imgs
-EXPLOSION = pygame.image.load("vscodeproj/img/explosion.png")# NOTE: setup the directory for imgs
+TRACK_BORDER = pygame.image.load("vscodeproj/img/track-border.png")#  setup the directory for imgs
+FINISH = pygame.image.load("vscodeproj/img/finish.png")#  setup the directory for imgs
+EXPLOSION = pygame.image.load("vscodeproj/img/explosion.png")#  setup the directory for imgs
 EXPLOSION = pygame.transform.scale(EXPLOSION, (40, 40))
 
 
 # player car taken from https://github.com/techwithtim/Pygame-Car-Racer/tree/main/tutorial1-code
-RED_CAR = pygame.image.load("vscodeproj/img/red-car.png") # NOTE: setup the directory for imgs
+RED_CAR = pygame.image.load("vscodeproj/img/red-car.png") # setup the directory for imgs
 RED_CAR = pygame.transform.scale(RED_CAR, (20,40))
 CAR_dir = pygame.transform.rotate(RED_CAR,0)
 """
