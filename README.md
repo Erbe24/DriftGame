@@ -13,9 +13,9 @@ You don't have to do anything fancy to run it. However:
     mixer.music.load("vscodeproj\Sounds\Background-Song.wav")
     Acceleration_Sound = mixer.Sound("vscodeproj\Sounds\Acceleration.wav")
     
-    DIRECTORY PATH OF THE IMAGES AND SOUNDS HAS TO BE CHANGED FOR YOUR PERSONAL COMPUTER OR IT WILL NOT RUN
-     DIRECTORY PATH OF THE IMAGES AND SOUNDS HAS TO BE CHANGED FOR YOUR PERSONAL COMPUTER OR IT WILL NOT RUN
-      DIRECTORY PATH OF THE IMAGES AND SOUNDS HAS TO BE CHANGED FOR YOUR PERSONAL COMPUTER OR IT WILL NOT RUN
+   
+DIRECTORY PATH OF THE IMAGES AND SOUNDS HAS TO BE CHANGED FOR YOUR PERSONAL COMPUTER OR IT WILL NOT RUN
+
 
 If you want to exit the game just click anywhere on the screen 
   (I created a line of code to do just that) 
